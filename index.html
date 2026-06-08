@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Unlock the Message</title>
+
+<style>
+body{
+background:#000;
+color:white;
+font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+text-align:center;
+padding:20px;
+}
+
+.card{
+max-width:600px;
+}
+
+button{
+margin:10px;
+padding:12px 20px;
+font-size:16px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+h1{
+margin-bottom:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="content">
+
+<h1>Before you leave...</h1>
+
+<p>There's one message locked on this website.</p>
+
+<button onclick="question1()">Unlock It</button>
+
+</div>
+
+<script>
+
+function question1(){
+document.getElementById("content").innerHTML=`
+<h1>Question 1</h1>
+
+<p>Why do you think I made this website?</p>
+
+<button onclick="wrong()">Because you're bored</button>
+
+<button onclick="q2()">Because you're guilty</button>
+
+<button onclick="q2()">Because you care</button>
+`;
+}
+
+function wrong(){
+alert("Not quite 😅");
+}
+
+function q2(){
+document.getElementById("content").innerHTML=`
+<h1>Question 2</h1>
+
+<p>What bothered me most after our fight?</p>
+
+<button onclick="wrong()">Losing the argument</button>
+
+<button onclick="wrong()">Looking stupid</button>
+
+<button onclick="reveal()">Creating distance between us</button>
+`;
+}
+
+function reveal(){
+document.getElementById("content").innerHTML=`
+<h1>You unlocked the message.</h1>
+
+<p>The truth is...</p>
+
+<p style="font-size:30px;">
+I still like you.
+</p>
+
+<p>
+And I was tired of pretending
+this was only about the argument.
+</p>
+
+<p>
+I'm sorry for my part in what happened.
+</p>
+
+<p>
+I just wanted to be honest.
+</p>
+`;
+}
+
+</script>
+
+</body>
+</html>
